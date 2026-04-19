@@ -1,0 +1,89 @@
+/* ===== CONTENEDOR GENERAL ===== */
+.moneda-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 20px;
+}
+
+/* ===== CARD ===== */
+.moneda-card {
+  background: #1e293b;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.moneda-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== IMAGEN ===== */
+.moneda-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* ===== NOMBRE ===== */
+.moneda-card h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #93c5fd;
+}
+
+/* ===== SYMBOL ===== */
+.moneda-card span {
+  display: block;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+}
+
+/* ===== ID ===== */
+.moneda-card p {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* ===== BOTON FAVORITO ===== */
+.fav-btn {
+  border: none;
+  background: #334155;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.fav-btn:hover {
+  background: #3b82f6;
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .moneda-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .moneda-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .moneda-card h2 {
+    font-size: 20px;
+  }
+}

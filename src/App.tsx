@@ -5,7 +5,7 @@ import Favoritos from './Favoritos';
 import Original from './Original';
 import Informativa from './Informativa';
 import Moneda from './Moneda';
-
+import './App.css'
 function App() {
   
 

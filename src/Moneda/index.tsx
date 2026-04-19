@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import './style.css'
 
 interface MonedaData{
     id:string
@@ -53,16 +54,19 @@ const { id } = useParams<{ id: string }>()
   if (!data) return <p>Cargando...</p>;
 
   return (
-    <>
-      <p>{data.id}</p>
-      <p>{data.symbol}</p>
-      <p>{data.name}</p>
-      <img src={data.image}></img>
-      <button onClick={toggleFavorite}>
-          {isFavorite ? "❤️" : "🤍"}
-        </button>
-      
-    </>
+    <div className="moneda-container">
+    <div className="moneda-card">
+      <img src={data.image} alt={data.name} />
+
+      <h2>{data.name}</h2>
+      <span>{data.symbol.toUpperCase()}</span>
+      <p>ID: {data.id}</p>
+
+      <button className="fav-btn" onClick={toggleFavorite}>
+        {isFavorite ? "❤️" : "🤍"}
+      </button>
+    </div>
+  </div>
   )
 };
 

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router";
+import './style.css'
 
 
 function Favoritos() {
@@ -15,23 +16,23 @@ function Favoritos() {
  
 
   return (
-    <div>
-      <h1>Favoritos</h1>
+    <div className="favoritos-container">
+    <h1>Favoritos</h1>
 
-      {favorites.length === 0 ? (
-        <p>No tienes equipos favoritos</p>
-      ) : (
-        <ul>
-          {favorites.map((moneda) => (
-            <li key={moneda}>
-              <Link to={`/moneda/${moneda}`}>
+    {favorites.length === 0 ? (
+      <p className="empty">No tienes monedas favoritas</p>
+    ) : (
+      <ul className="lista-favoritos">
+        {favorites.map((moneda) => (
+          <li className="item-favorito" key={moneda}>
+            <Link to={`/moneda/${moneda}`}>
               {moneda}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
   );
 }
 

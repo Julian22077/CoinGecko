@@ -1,0 +1,72 @@
+/* ===== CONTENEDOR ===== */
+.favoritos-container {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== TITULO ===== */
+.favoritos-container h1 {
+  font-size: 28px;
+  color: #93c5fd;
+  margin-bottom: 20px;
+}
+
+/* ===== MENSAJE VACIO ===== */
+.empty {
+  font-size: 16px;
+  color: #94a3b8;
+  margin-top: 20px;
+}
+
+/* ===== LISTA ===== */
+.lista-favoritos {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== ITEM ===== */
+.item-favorito {
+  background: #1e293b;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.item-favorito:hover {
+  background: #334155;
+  transform: translateY(-3px);
+}
+
+/* ===== LINK ===== */
+.item-favorito a {
+  text-decoration: none;
+  color: #60a5fa;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+}
+
+.item-favorito a:hover {
+  color: #93c5fd;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .favoritos-container h1 {
+    font-size: 22px;
+  }
+
+  .item-favorito {
+    padding: 12px;
+  }
+
+  .item-favorito a {
+    font-size: 14px;
+  }
+}

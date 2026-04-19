@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import {Link } from 'react-router';
+import  './style.css'
 
 interface Monedas{
   id:String
@@ -94,8 +95,8 @@ function Home(){
                         : ''
                     }
                 >
-                  <td>{moneda.market_cap_rank}</td>
-                  <td>
+                  <td data-label="#">{moneda.market_cap_rank}</td>
+                  <td data-label="Nombre">
                         <Link to={`/moneda/${moneda.id}`}>
                         {moneda.name}
                       </Link>
