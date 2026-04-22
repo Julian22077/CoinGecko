@@ -115,7 +115,15 @@ function Original(){
   "usual-usd",
   "siren"
 ];
-const id = coins[Math.floor(Math.random() * coins.length)]
+ document.body.style.background = "";
+const [id, setId] = useState(
+  coins[Math.floor(Math.random() * coins.length)]
+);
+const Nueva = () => {
+  const nuevoId = coins[Math.floor(Math.random() * coins.length)];
+  setId(nuevoId);
+};
+
  const [data, setData]=useState<Datos |null>(null);
  const [dinero, setDinero]=useState(100);
 
@@ -130,7 +138,7 @@ const id = coins[Math.floor(Math.random() * coins.length)]
       }
     }
     fetchData()
-  }, [])
+  }, [id])
 
   const Chartdata={
     labels:["precio actual","maximo en 24h", "minimo en 24"],
@@ -178,7 +186,12 @@ const id = coins[Math.floor(Math.random() * coins.length)]
         </div>
       </div>
     </div>
-
+    <br></br>
+    <div className="boton-container">
+  <button className="boton-cambiar" onClick={Nueva}>
+     Cambiar criptomoneda
+  </button>
+</div>
     <div className="simulador">
       <h3>Simulador de inversión</h3>
 

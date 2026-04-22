@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router";
 import './style.css'
 
-
+ document.body.style.background = "";
 function Favoritos() {
   const [favorites, setFavorites] = useState<string[]>([]);
 

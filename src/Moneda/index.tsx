@@ -9,6 +9,7 @@ interface MonedaData{
     image:string
 
 }
+document.body.style.background = "";
 function Moneda() {
 const { id } = useParams<{ id: string }>()
  const [data, setData] = useState<MonedaData | null>(null);
