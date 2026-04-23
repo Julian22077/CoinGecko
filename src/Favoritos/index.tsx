@@ -7,7 +7,7 @@ function Favoritos() {
   const [favorites, setFavorites] = useState<string[]>([]);
 
 
-  // 🔁 cargar favoritos desde localStorage
+ 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("favorites") || "[]");
     setFavorites(stored);
