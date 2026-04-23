@@ -19,6 +19,7 @@ interface Estadistica{
 type FiltroTipo = 'monedas'|'mercado-bajo' | 'volumen-alto' | 'volumen-bajo'
 function Home(){
   document.body.style.background = "";
+  
     const [monedas,setMonedas]=useState<Monedas[]>([]);
       const [filtro, setFiltro] = useState<FiltroTipo>('monedas')
       const [estadisticas, setEstadisticas] = useState<Estadistica[]>([])

@@ -7,7 +7,13 @@ interface MonedaData{
     symbol:string
     name: string
     image:string
-
+    current_price:number
+    market_cap:number
+    market_cap_rank:number
+    total_volume:number
+    total_supply:number
+    ath:number
+    atl:number
 }
 document.body.style.background = "";
 function Moneda() {
@@ -60,8 +66,15 @@ const { id } = useParams<{ id: string }>()
       <img src={data.image} alt={data.name} />
 
       <h2>{data.name}</h2>
-      <span>{data.symbol.toUpperCase()}</span>
+      <span>Simbolo{data.symbol.toUpperCase()}</span>
       <p>ID: {data.id}</p>
+      <p>Precio actual: {data.current_price}</p>
+      <p>Capitalización de mercado: {data.market_cap}</p>
+      <p> Ranking de Capitalización de mercado: {data.market_cap_rank}</p>
+      <p>Volumen Total: {data.total_volume}</p>
+      <p>Sunministro total: {data.total_supply}</p>
+      <p>Maximo Histórico: {data.ath}</p>
+      <p>Mínimo Histórico: {data.atl}</p>
 
       <button className="fav-btn" onClick={toggleFavorite}>
         {isFavorite ? "❤️" : "🤍"}

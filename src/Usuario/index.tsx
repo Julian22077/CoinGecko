@@ -1,4 +1,6 @@
+
 function Usuario() {
+   document.body.style.background = "";
 
   return (
     <>
