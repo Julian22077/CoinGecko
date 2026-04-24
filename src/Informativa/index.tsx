@@ -1,6 +1,6 @@
 import './style.css'
 function Informativa() {
- document.body.style.backgroundImage = "url(https://user9351.na.imgto.link/public/20260423/gemini-generated-image-qey2fhqey2fhqey2.avif)";
+ document.body.style.backgroundImage = "url(https://www.image2url.com/r2/default/images/1776990944884-2da655d9-e747-4c54-914a-79b8e2e04a64.png)";
   return (
     <>
     
