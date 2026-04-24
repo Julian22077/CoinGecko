@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Chart as ChartJS } from "chart.js/auto";
+ChartJS;
 import { Bar, Doughnut } from "react-chartjs-2";
 import './style.css'
 
